@@ -58,6 +58,13 @@ const assignShift = (employeeName, day, hours) => {
     } else {// add new shift if one doesnt have a shift
     employee.shifts.push({ day: day, hours: hours});
     console.log(`adding shift on ${day} for ${employeeName}.`);
+    }
 }
 
-assignShift('Kyle', 'Saturday', 8);
+//assignShift('Kyle', 'Saturday', 8); - Remove // to test function
+
+const calculateTotalHours = employeeName => {
+    const employee = employees.find(e => e.name === employeeName); //find employees
+    return employee ? employee.shifts.reduce((total, shift ) => total + shift.hours, 0) :0; // find if employee exists than calc hours using reduce
+}
+//console.log(calculateTotalHours('Kyle')); To test calct total hours remove //
