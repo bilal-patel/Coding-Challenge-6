@@ -63,8 +63,19 @@ const assignShift = (employeeName, day, hours) => {
 
 //assignShift('Kyle', 'Saturday', 8); - Remove // to test function
 
+//Task 4 - Create a Function to Calculate Total Hours Worked
 const calculateTotalHours = employeeName => {
     const employee = employees.find(e => e.name === employeeName); //find employees
     return employee ? employee.shifts.reduce((total, shift ) => total + shift.hours, 0) :0; // find if employee exists than calc hours using reduce
 }
 //console.log(calculateTotalHours('Kyle')); To test calct total hours remove //
+
+// Task 5 - Create a Function to List Employees with Free Days
+
+const listAvailableEmployees = (day) => {
+    const freeEmployees = employees.filter(employee => !employee.shifts.some(shift => shift.day === day) // find avail employee
+    );
+
+freeEmployees.forEach(employee => console.log(employee.name)); // log name of avail employeee
+}
+//listAvailableEmployees ('Monday'); // Test 5 remove //
