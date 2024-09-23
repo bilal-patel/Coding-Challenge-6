@@ -32,3 +32,12 @@ let kyle = new Employee ('Kyle', [
 // create an array of products
 const employees = [john, sara, steve, kyle];
 //console.log(JSON.stringify(employees, null, 2)); executing task 1 - using JSON.stringify as I chose to use a class and output was not showing correctly
+
+// Task 2 - Create a Function to Display Employee Shift Details
+const displayEmployeeShifts = employee => {
+    console.log(`Employee: ${employee.name}`)
+    employee.shifts.forEach(shift => {
+        console.log (`Days: ${shift.day}, Hours: ${shift.hours}`);
+    });
+}
+// displayEmployeeShifts(steve); REMOVE // to test
