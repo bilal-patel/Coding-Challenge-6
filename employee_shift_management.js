@@ -1,0 +1,34 @@
+//Task 1 - Create an Employees Array of Employee Objects
+
+// Setting up a class
+class Employee  {
+    constructor (name, shifts) {
+        this.name = name;
+        this.shifts = shifts;
+    }
+}
+// Create 4 employees w/ shifts
+let john = new Employee ('John', [
+    {day: 'Monday', hours: 8 },
+    {day: 'Wednesday', hours: 6 }
+]);
+
+let sara = new Employee ('Sara', [
+    {day: 'Tuesday', hours: 3 },
+    {day: 'Wednesday', hours: 7 }
+]);
+
+let steve = new Employee ('Steve', [
+    {day: 'Friday', hours: 9 },
+    {day: 'Thursday', hours: 12 }
+]);
+
+let kyle = new Employee ('Kyle', [
+    {day: 'Monday', hours: 8 },
+    {day: 'Sunday', hours: 3 }
+]);
+
+
+// create an array of products
+const employees = [john, sara, steve, kyle];
+//console.log(JSON.stringify(employees, null, 2)); executing task 1 - using JSON.stringify as I chose to use a class and output was not showing correctly
